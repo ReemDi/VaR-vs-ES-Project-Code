@@ -89,7 +89,7 @@ try:
         # Calculate VaR (Value at Risk) for a given confidence level
         confidence_level = 0.95 
         period=1 / (1-confidence_level)
-        VaR = eva.get_return_value(return_period=period, return_period_size="7D",alpha=0.95)  
+        VaR = eva.get_return_value(return_period=period, return_period_size="7D")  
         VaR_value = VaR[0]  
         print(f"Value at Risk (VaR) at {confidence_level * 100}% confidence level and return period of {round(period)} weeks: {VaR_value}")
         
